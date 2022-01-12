@@ -25,6 +25,10 @@ Then - https://github.com/devxoul/Then
 
 Swift Package Manager
 
+## CLI
+
+Tuist
+
 ## Authors
 
 [Jongho Lee](https://github.com/bazinga94)
