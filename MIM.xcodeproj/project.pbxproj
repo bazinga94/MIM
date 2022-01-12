@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		43261E58278EC6970038EF0E /* RIBs in Frameworks */ = {isa = PBXBuildFile; productRef = 43261E57278EC6970038EF0E /* RIBs */; };
 		43A343742768D9CC000A8D82 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A343732768D9CC000A8D82 /* AppDelegate.swift */; };
 		43A343762768D9CC000A8D82 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A343752768D9CC000A8D82 /* SceneDelegate.swift */; };
 		43A343782768D9CC000A8D82 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A343772768D9CC000A8D82 /* ViewController.swift */; };
@@ -56,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43261E58278EC6970038EF0E /* RIBs in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -167,6 +169,9 @@
 			dependencies = (
 			);
 			name = MIM;
+			packageProductDependencies = (
+				43261E57278EC6970038EF0E /* RIBs */,
+			);
 			productName = MIM;
 			productReference = 43A343702768D9CC000A8D82 /* MIM.app */;
 			productType = "com.apple.product-type.application";
@@ -239,6 +244,9 @@
 				Base,
 			);
 			mainGroup = 43A343672768D9CC000A8D82;
+			packageReferences = (
+				43261E56278EC6970038EF0E /* XCRemoteSwiftPackageReference "RIBs" */,
+			);
 			productRefGroup = 43A343712768D9CC000A8D82 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -650,6 +658,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		43261E56278EC6970038EF0E /* XCRemoteSwiftPackageReference "RIBs" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/uber/RIBs.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.9.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		43261E57278EC6970038EF0E /* RIBs */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 43261E56278EC6970038EF0E /* XCRemoteSwiftPackageReference "RIBs" */;
+			productName = RIBs;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 43A343682768D9CC000A8D82 /* Project object */;
 }
