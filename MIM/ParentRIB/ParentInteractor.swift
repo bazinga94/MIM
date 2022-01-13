@@ -23,22 +23,16 @@ protocol ParentListener: AnyObject {
 
 final class ParentInteractor: PresentableInteractor<ParentPresentable>, ParentInteractable, ParentPresentableListener {
 
+	// MARK: - ParentInteractable
+
 	weak var router: ParentRouting?
 	weak var listener: ParentListener?
 
-	// TODO: Add additional dependencies to constructor. Do not perform any logic
-	// in constructor.
-//	override init(presenter: ParentPresentable) {
-//		super.init(presenter: presenter)
-//		presenter.listener = self
-//	}
+	// TODO: Add additional dependencies to constructor. Do not perform any logic in constructor.
 
 	// MARK: - Con(De)structor
 
-	init(
-		message: String,
-		presenter: ParentPresentable
-	) {
+	override init(presenter: ParentPresentable) {
 		super.init(presenter: presenter)
 		presenter.listener = self
 	}

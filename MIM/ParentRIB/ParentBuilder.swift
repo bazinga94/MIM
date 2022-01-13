@@ -10,14 +10,10 @@ import RIBs
 protocol ParentDependency: Dependency {
 	// TODO: Declare the set of dependencies required by this RIB, but cannot be
 	// created by this RIB.
-	var message: String { get }
 }
 
 final class ParentComponent: Component<ParentDependency> {
 	// TODO: Declare 'fileprivate' dependencies that are only used by this RIB.
-	var message: String {
-		dependency.message
-	}
 }
 
 // MARK: - Builder
@@ -33,13 +29,14 @@ final class ParentBuilder: Builder<ParentDependency>, ParentBuildable {
 	}
 
 	func build(withListener listener: ParentListener) -> ParentRouting {
-		let component = ParentComponent(dependency: dependency)
 		let viewController = ParentViewController()
-		let interactor = ParentInteractor(
-			message: component.message,
-			presenter: viewController
-		)
+		let component = ParentComponent(dependency: dependency)
+		let interactor = ParentInteractor(presenter: viewController)
 		interactor.listener = listener
-		return ParentRouter(interactor: interactor, viewController: viewController)
+
+		return ParentRouter(
+			interactor: interactor,
+			viewController: viewController
+		)
 	}
 }

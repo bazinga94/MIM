@@ -71,7 +71,6 @@ final class ParentViewController: UIViewController, ParentPresentable, ParentVie
 private extension ParentViewController {
 	func setupUI() {
 		view.backgroundColor = .white
-		textField.text = listener.publisher
 
 		view.addSubview(textField)
 		view.addSubview(detailButton)

@@ -8,32 +8,39 @@
 import RIBs
 
 protocol ChildDependency: Dependency {
-    // TODO: Declare the set of dependencies required by this RIB, but cannot be
-    // created by this RIB.
+	// TODO: Declare the set of dependencies required by this RIB, but cannot be
+	// created by this RIB.
+	var message: String { get }
 }
 
 final class ChildComponent: Component<ChildDependency> {
 
-    // TODO: Declare 'fileprivate' dependencies that are only used by this RIB.
+	// TODO: Declare 'fileprivate' dependencies that are only used by this RIB.
+	var message: String {
+		dependency.message
+	}
 }
 
 // MARK: - Builder
 
 protocol ChildBuildable: Buildable {
-    func build(withListener listener: ChildListener) -> ChildRouting
+	func build(withListener listener: ChildListener) -> ChildRouting
 }
 
 final class ChildBuilder: Builder<ChildDependency>, ChildBuildable {
 
-    override init(dependency: ChildDependency) {
-        super.init(dependency: dependency)
-    }
+	override init(dependency: ChildDependency) {
+		super.init(dependency: dependency)
+	}
 
-    func build(withListener listener: ChildListener) -> ChildRouting {
-        let component = ChildComponent(dependency: dependency)
-        let viewController = ChildViewController()
-        let interactor = ChildInteractor(presenter: viewController)
-        interactor.listener = listener
-        return ChildRouter(interactor: interactor, viewController: viewController)
-    }
+	func build(withListener listener: ChildListener) -> ChildRouting {
+		let component = ChildComponent(dependency: dependency)
+		let viewController = ChildViewController()
+		let interactor = ChildInteractor(
+			message: component.message,
+			presenter: viewController
+		)
+		interactor.listener = listener
+		return ChildRouter(interactor: interactor, viewController: viewController)
+	}
 }
