@@ -7,7 +7,7 @@
 
 import RIBs
 
-protocol ParentInteractable: Interactable {
+protocol ParentInteractable: Interactable, ChildListener {
 	var router: ParentRouting? { get set }
 	var listener: ParentListener? { get set }
 }
@@ -21,6 +21,8 @@ protocol ParentViewControllable: ViewControllable {
 final class ParentRouter: ViewableRouter<ParentInteractable, ParentViewControllable>, ParentRouting {
 
 	private var childBuilder: ChildBuildable
+
+	private var childRouter: ChildRouting?
 
 	// TODO: Constructor inject child builder protocols to allow building children.
 
@@ -39,6 +41,9 @@ final class ParentRouter: ViewableRouter<ParentInteractable, ParentViewControlla
 extension ParentRouter {
 	func attachChildRIB() {
 		let router = childBuilder.build(withListener: interactor)
+		childRouter = router
+		attachChild(router)
+		viewController.present(router.viewControllable, animated: true)
 	}
 
 	func detachChildRIB() {

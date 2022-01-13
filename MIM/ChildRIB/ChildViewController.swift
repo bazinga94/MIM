@@ -37,7 +37,7 @@ final class ChildViewController: UIViewController, ChildPresentable, ChildViewCo
 
 	init() {
 		super.init(nibName: nil, bundle: nil)
-		modalPresentationStyle = .fullScreen
+		modalPresentationStyle = .pageSheet
 	}
 
 	required init?(coder: NSCoder) {
