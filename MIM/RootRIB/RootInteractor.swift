@@ -1,34 +1,34 @@
 //
-//  ParentRIBInteractor.swift
+//  RootInteractor.swift
 //  MIM
 //
-//  Created by Jongho Lee on 2022/01/12.
+//  Created by Jongho Lee on 2022/01/13.
 //
 
 import RIBs
 import RxSwift
 
-protocol ParentRIBRouting: ViewableRouting {
+protocol RootRouting: ViewableRouting {
     // TODO: Declare methods the interactor can invoke to manage sub-tree via the router.
 }
 
-protocol ParentRIBPresentable: Presentable {
-    var listener: ParentRIBPresentableListener? { get set }
+protocol RootPresentable: Presentable {
+    var listener: RootPresentableListener? { get set }
     // TODO: Declare methods the interactor can invoke the presenter to present data.
 }
 
-protocol ParentRIBListener: AnyObject {
+protocol RootListener: AnyObject {
     // TODO: Declare methods the interactor can invoke to communicate with other RIBs.
 }
 
-final class ParentRIBInteractor: PresentableInteractor<ParentRIBPresentable>, ParentRIBInteractable, ParentRIBPresentableListener {
+final class RootInteractor: PresentableInteractor<RootPresentable>, RootInteractable, RootPresentableListener {
 
-    weak var router: ParentRIBRouting?
-    weak var listener: ParentRIBListener?
+    weak var router: RootRouting?
+    weak var listener: RootListener?
 
     // TODO: Add additional dependencies to constructor. Do not perform any logic
     // in constructor.
-    override init(presenter: ParentRIBPresentable) {
+    override init(presenter: RootPresentable) {
         super.init(presenter: presenter)
         presenter.listener = self
     }

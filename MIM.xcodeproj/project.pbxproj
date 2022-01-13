@@ -8,16 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		43261E58278EC6970038EF0E /* RIBs in Frameworks */ = {isa = PBXBuildFile; productRef = 43261E57278EC6970038EF0E /* RIBs */; };
-		43261E5E278EC80A0038EF0E /* ParentRIBRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43261E59278EC80A0038EF0E /* ParentRIBRouter.swift */; };
-		43261E5F278EC80A0038EF0E /* ParentRIBViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43261E5A278EC80A0038EF0E /* ParentRIBViewController.swift */; };
-		43261E60278EC80A0038EF0E /* ParentRIBBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43261E5B278EC80A0038EF0E /* ParentRIBBuilder.swift */; };
-		43261E61278EC80A0038EF0E /* ParentRIBInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43261E5C278EC80A0038EF0E /* ParentRIBInteractor.swift */; };
-		43261E62278EC80A0038EF0E /* ParentRIBViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 43261E5D278EC80A0038EF0E /* ParentRIBViewController.xib */; };
-		43261E6A278ECCC30038EF0E /* ChildRIBRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43261E65278ECCC30038EF0E /* ChildRIBRouter.swift */; };
-		43261E6B278ECCC30038EF0E /* ChildRIBViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43261E66278ECCC30038EF0E /* ChildRIBViewController.swift */; };
-		43261E6C278ECCC30038EF0E /* ChildRIBBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43261E67278ECCC30038EF0E /* ChildRIBBuilder.swift */; };
-		43261E6D278ECCC30038EF0E /* ChildRIBInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43261E68278ECCC30038EF0E /* ChildRIBInteractor.swift */; };
-		43261E6E278ECCC30038EF0E /* ChildRIBViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 43261E69278ECCC30038EF0E /* ChildRIBViewController.xib */; };
+		43261E7C278FBED70038EF0E /* RootRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43261E78278FBED70038EF0E /* RootRouter.swift */; };
+		43261E7D278FBED70038EF0E /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43261E79278FBED70038EF0E /* RootViewController.swift */; };
+		43261E7E278FBED70038EF0E /* RootBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43261E7A278FBED70038EF0E /* RootBuilder.swift */; };
+		43261E7F278FBED70038EF0E /* RootInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43261E7B278FBED70038EF0E /* RootInteractor.swift */; };
+		43261E84278FBEE70038EF0E /* ChildRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43261E80278FBEE70038EF0E /* ChildRouter.swift */; };
+		43261E85278FBEE70038EF0E /* ChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43261E81278FBEE70038EF0E /* ChildViewController.swift */; };
+		43261E86278FBEE70038EF0E /* ChildBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43261E82278FBEE70038EF0E /* ChildBuilder.swift */; };
+		43261E87278FBEE70038EF0E /* ChildInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43261E83278FBEE70038EF0E /* ChildInteractor.swift */; };
+		43261E8C278FBEFA0038EF0E /* ParentRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43261E88278FBEFA0038EF0E /* ParentRouter.swift */; };
+		43261E8D278FBEFA0038EF0E /* ParentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43261E89278FBEFA0038EF0E /* ParentViewController.swift */; };
+		43261E8E278FBEFA0038EF0E /* ParentBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43261E8A278FBEFA0038EF0E /* ParentBuilder.swift */; };
+		43261E8F278FBEFA0038EF0E /* ParentInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43261E8B278FBEFA0038EF0E /* ParentInteractor.swift */; };
 		43A343742768D9CC000A8D82 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A343732768D9CC000A8D82 /* AppDelegate.swift */; };
 		43A343762768D9CC000A8D82 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A343752768D9CC000A8D82 /* SceneDelegate.swift */; };
 		43A343782768D9CC000A8D82 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A343772768D9CC000A8D82 /* ViewController.swift */; };
@@ -47,16 +49,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		43261E59278EC80A0038EF0E /* ParentRIBRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentRIBRouter.swift; sourceTree = "<group>"; };
-		43261E5A278EC80A0038EF0E /* ParentRIBViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentRIBViewController.swift; sourceTree = "<group>"; };
-		43261E5B278EC80A0038EF0E /* ParentRIBBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentRIBBuilder.swift; sourceTree = "<group>"; };
-		43261E5C278EC80A0038EF0E /* ParentRIBInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentRIBInteractor.swift; sourceTree = "<group>"; };
-		43261E5D278EC80A0038EF0E /* ParentRIBViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ParentRIBViewController.xib; sourceTree = "<group>"; };
-		43261E65278ECCC30038EF0E /* ChildRIBRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildRIBRouter.swift; sourceTree = "<group>"; };
-		43261E66278ECCC30038EF0E /* ChildRIBViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildRIBViewController.swift; sourceTree = "<group>"; };
-		43261E67278ECCC30038EF0E /* ChildRIBBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildRIBBuilder.swift; sourceTree = "<group>"; };
-		43261E68278ECCC30038EF0E /* ChildRIBInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildRIBInteractor.swift; sourceTree = "<group>"; };
-		43261E69278ECCC30038EF0E /* ChildRIBViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChildRIBViewController.xib; sourceTree = "<group>"; };
+		43261E78278FBED70038EF0E /* RootRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootRouter.swift; sourceTree = "<group>"; };
+		43261E79278FBED70038EF0E /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		43261E7A278FBED70038EF0E /* RootBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootBuilder.swift; sourceTree = "<group>"; };
+		43261E7B278FBED70038EF0E /* RootInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootInteractor.swift; sourceTree = "<group>"; };
+		43261E80278FBEE70038EF0E /* ChildRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildRouter.swift; sourceTree = "<group>"; };
+		43261E81278FBEE70038EF0E /* ChildViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildViewController.swift; sourceTree = "<group>"; };
+		43261E82278FBEE70038EF0E /* ChildBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildBuilder.swift; sourceTree = "<group>"; };
+		43261E83278FBEE70038EF0E /* ChildInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildInteractor.swift; sourceTree = "<group>"; };
+		43261E88278FBEFA0038EF0E /* ParentRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentRouter.swift; sourceTree = "<group>"; };
+		43261E89278FBEFA0038EF0E /* ParentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentViewController.swift; sourceTree = "<group>"; };
+		43261E8A278FBEFA0038EF0E /* ParentBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentBuilder.swift; sourceTree = "<group>"; };
+		43261E8B278FBEFA0038EF0E /* ParentInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentInteractor.swift; sourceTree = "<group>"; };
 		43A343702768D9CC000A8D82 /* MIM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MIM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		43A343732768D9CC000A8D82 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		43A343752768D9CC000A8D82 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -101,11 +105,10 @@
 		43261E63278EC8130038EF0E /* ParentRIB */ = {
 			isa = PBXGroup;
 			children = (
-				43261E59278EC80A0038EF0E /* ParentRIBRouter.swift */,
-				43261E5B278EC80A0038EF0E /* ParentRIBBuilder.swift */,
-				43261E5C278EC80A0038EF0E /* ParentRIBInteractor.swift */,
-				43261E5A278EC80A0038EF0E /* ParentRIBViewController.swift */,
-				43261E5D278EC80A0038EF0E /* ParentRIBViewController.xib */,
+				43261E88278FBEFA0038EF0E /* ParentRouter.swift */,
+				43261E89278FBEFA0038EF0E /* ParentViewController.swift */,
+				43261E8A278FBEFA0038EF0E /* ParentBuilder.swift */,
+				43261E8B278FBEFA0038EF0E /* ParentInteractor.swift */,
 			);
 			path = ParentRIB;
 			sourceTree = "<group>";
@@ -113,13 +116,23 @@
 		43261E64278ECCAD0038EF0E /* ChildRIB */ = {
 			isa = PBXGroup;
 			children = (
-				43261E65278ECCC30038EF0E /* ChildRIBRouter.swift */,
-				43261E66278ECCC30038EF0E /* ChildRIBViewController.swift */,
-				43261E67278ECCC30038EF0E /* ChildRIBBuilder.swift */,
-				43261E68278ECCC30038EF0E /* ChildRIBInteractor.swift */,
-				43261E69278ECCC30038EF0E /* ChildRIBViewController.xib */,
+				43261E80278FBEE70038EF0E /* ChildRouter.swift */,
+				43261E81278FBEE70038EF0E /* ChildViewController.swift */,
+				43261E82278FBEE70038EF0E /* ChildBuilder.swift */,
+				43261E83278FBEE70038EF0E /* ChildInteractor.swift */,
 			);
 			path = ChildRIB;
+			sourceTree = "<group>";
+		};
+		43261E6F278FBC4E0038EF0E /* RootRIB */ = {
+			isa = PBXGroup;
+			children = (
+				43261E78278FBED70038EF0E /* RootRouter.swift */,
+				43261E79278FBED70038EF0E /* RootViewController.swift */,
+				43261E7A278FBED70038EF0E /* RootBuilder.swift */,
+				43261E7B278FBED70038EF0E /* RootInteractor.swift */,
+			);
+			path = RootRIB;
 			sourceTree = "<group>";
 		};
 		43A343672768D9CC000A8D82 = {
@@ -145,6 +158,7 @@
 		43A343722768D9CC000A8D82 /* MIM */ = {
 			isa = PBXGroup;
 			children = (
+				43261E6F278FBC4E0038EF0E /* RootRIB */,
 				43261E64278ECCAD0038EF0E /* ChildRIB */,
 				43261E63278EC8130038EF0E /* ParentRIB */,
 				43A343A32768DB47000A8D82 /* Application */,
@@ -309,10 +323,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				43261E6E278ECCC30038EF0E /* ChildRIBViewController.xib in Resources */,
 				43A343802768D9D1000A8D82 /* LaunchScreen.storyboard in Resources */,
 				43A3437D2768D9D1000A8D82 /* Assets.xcassets in Resources */,
-				43261E62278EC80A0038EF0E /* ParentRIBViewController.xib in Resources */,
 				43A3437B2768D9CC000A8D82 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -338,17 +350,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				43261E5F278EC80A0038EF0E /* ParentRIBViewController.swift in Sources */,
-				43261E6A278ECCC30038EF0E /* ChildRIBRouter.swift in Sources */,
-				43261E6C278ECCC30038EF0E /* ChildRIBBuilder.swift in Sources */,
-				43261E6D278ECCC30038EF0E /* ChildRIBInteractor.swift in Sources */,
-				43261E61278EC80A0038EF0E /* ParentRIBInteractor.swift in Sources */,
-				43261E6B278ECCC30038EF0E /* ChildRIBViewController.swift in Sources */,
-				43261E5E278EC80A0038EF0E /* ParentRIBRouter.swift in Sources */,
+				43261E7D278FBED70038EF0E /* RootViewController.swift in Sources */,
+				43261E8E278FBEFA0038EF0E /* ParentBuilder.swift in Sources */,
+				43261E84278FBEE70038EF0E /* ChildRouter.swift in Sources */,
+				43261E87278FBEE70038EF0E /* ChildInteractor.swift in Sources */,
+				43261E8F278FBEFA0038EF0E /* ParentInteractor.swift in Sources */,
+				43261E86278FBEE70038EF0E /* ChildBuilder.swift in Sources */,
+				43261E8C278FBEFA0038EF0E /* ParentRouter.swift in Sources */,
+				43261E85278FBEE70038EF0E /* ChildViewController.swift in Sources */,
+				43261E7C278FBED70038EF0E /* RootRouter.swift in Sources */,
+				43261E7F278FBED70038EF0E /* RootInteractor.swift in Sources */,
+				43261E8D278FBEFA0038EF0E /* ParentViewController.swift in Sources */,
 				43A343782768D9CC000A8D82 /* ViewController.swift in Sources */,
 				43A343742768D9CC000A8D82 /* AppDelegate.swift in Sources */,
 				43A343762768D9CC000A8D82 /* SceneDelegate.swift in Sources */,
-				43261E60278EC80A0038EF0E /* ParentRIBBuilder.swift in Sources */,
+				43261E7E278FBED70038EF0E /* RootBuilder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
