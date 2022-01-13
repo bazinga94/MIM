@@ -8,7 +8,7 @@
 import RIBs
 import UIKit
 
-protocol RootInteractable: Interactable {
+protocol RootInteractable: Interactable, ParentListener {
 	var router: RootRouting? { get set }
 	var listener: RootListener? { get set }
 }

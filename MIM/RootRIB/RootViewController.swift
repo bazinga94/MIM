@@ -9,13 +9,22 @@ import RIBs
 import RxSwift
 import UIKit
 
-protocol RootPresentableListener: class {
-    // TODO: Declare properties and methods that the view controller can invoke to perform
-    // business logic, such as signIn(). This protocol is implemented by the corresponding
-    // interactor class.
+protocol RootPresentableListener: AnyObject {
+	// TODO: Declare properties and methods that the view controller can invoke to perform
+	// business logic, such as signIn(). This protocol is implemented by the corresponding
+	// interactor class.
 }
 
-final class RootViewController: UIViewController, RootPresentable, RootViewControllable {
+final class RootViewController: UIViewController, RootPresentable {
 
-    weak var listener: RootPresentableListener?
+	// MARK: - RootPresentable
+
+	weak var listener: RootPresentableListener?
+}
+
+// MARK: - RootViewControllable
+extension RootViewController: RootViewControllable {
+	func present(_ viewController: ViewControllable, animated: Bool) {
+		present(viewController.uiviewController, animated: animated)
+	}
 }

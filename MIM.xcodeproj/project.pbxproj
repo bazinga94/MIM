@@ -20,6 +20,7 @@
 		43261E8D278FBEFA0038EF0E /* ParentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43261E89278FBEFA0038EF0E /* ParentViewController.swift */; };
 		43261E8E278FBEFA0038EF0E /* ParentBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43261E8A278FBEFA0038EF0E /* ParentBuilder.swift */; };
 		43261E8F278FBEFA0038EF0E /* ParentInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43261E8B278FBEFA0038EF0E /* ParentInteractor.swift */; };
+		43261E91278FC59A0038EF0E /* RootComponent+Parent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43261E90278FC59A0038EF0E /* RootComponent+Parent.swift */; };
 		43A343742768D9CC000A8D82 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A343732768D9CC000A8D82 /* AppDelegate.swift */; };
 		43A343762768D9CC000A8D82 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A343752768D9CC000A8D82 /* SceneDelegate.swift */; };
 		43A343782768D9CC000A8D82 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A343772768D9CC000A8D82 /* ViewController.swift */; };
@@ -61,6 +62,7 @@
 		43261E89278FBEFA0038EF0E /* ParentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentViewController.swift; sourceTree = "<group>"; };
 		43261E8A278FBEFA0038EF0E /* ParentBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentBuilder.swift; sourceTree = "<group>"; };
 		43261E8B278FBEFA0038EF0E /* ParentInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentInteractor.swift; sourceTree = "<group>"; };
+		43261E90278FC59A0038EF0E /* RootComponent+Parent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RootComponent+Parent.swift"; sourceTree = "<group>"; };
 		43A343702768D9CC000A8D82 /* MIM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MIM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		43A343732768D9CC000A8D82 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		43A343752768D9CC000A8D82 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -131,6 +133,7 @@
 				43261E79278FBED70038EF0E /* RootViewController.swift */,
 				43261E7A278FBED70038EF0E /* RootBuilder.swift */,
 				43261E7B278FBED70038EF0E /* RootInteractor.swift */,
+				43261E90278FC59A0038EF0E /* RootComponent+Parent.swift */,
 			);
 			path = RootRIB;
 			sourceTree = "<group>";
@@ -351,6 +354,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				43261E7D278FBED70038EF0E /* RootViewController.swift in Sources */,
+				43261E91278FC59A0038EF0E /* RootComponent+Parent.swift in Sources */,
 				43261E8E278FBEFA0038EF0E /* ParentBuilder.swift in Sources */,
 				43261E84278FBEE70038EF0E /* ChildRouter.swift in Sources */,
 				43261E87278FBEE70038EF0E /* ChildInteractor.swift in Sources */,
