@@ -8,19 +8,40 @@
 import RIBs
 
 protocol ParentInteractable: Interactable {
-    var router: ParentRouting? { get set }
-    var listener: ParentListener? { get set }
+	var router: ParentRouting? { get set }
+	var listener: ParentListener? { get set }
 }
 
 protocol ParentViewControllable: ViewControllable {
-    // TODO: Declare methods the router invokes to manipulate the view hierarchy.
+	// TODO: Declare methods the router invokes to manipulate the view hierarchy.
+	func present(_ viewController: ViewControllable, animated: Bool)
+	func dismiss(_ viewController: ViewControllable, animated: Bool)
 }
 
 final class ParentRouter: ViewableRouter<ParentInteractable, ParentViewControllable>, ParentRouting {
 
-    // TODO: Constructor inject child builder protocols to allow building children.
-    override init(interactor: ParentInteractable, viewController: ParentViewControllable) {
-        super.init(interactor: interactor, viewController: viewController)
-        interactor.router = self
-    }
+	private var childBuilder: ChildBuildable
+
+	// TODO: Constructor inject child builder protocols to allow building children.
+
+	init(
+		interactor: ParentInteractable,
+		viewController: ParentViewControllable,
+		childBuilder: ChildBuildable
+	) {
+		self.childBuilder = childBuilder
+		super.init(interactor: interactor, viewController: viewController)
+		interactor.router = self
+	}
+}
+
+// MARK: - ParentRouting
+extension ParentRouter {
+	func attachChildRIB() {
+		let router = childBuilder.build(withListener: interactor)
+	}
+
+	func detachChildRIB() {
+
+	}
 }

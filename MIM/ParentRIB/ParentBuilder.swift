@@ -33,10 +33,12 @@ final class ParentBuilder: Builder<ParentDependency>, ParentBuildable {
 		let component = ParentComponent(dependency: dependency)
 		let interactor = ParentInteractor(presenter: viewController)
 		interactor.listener = listener
+		let childBuilder = ChildBuilder(dependency: component)
 
 		return ParentRouter(
 			interactor: interactor,
-			viewController: viewController
+			viewController: viewController,
+			childBuilder: childBuilder
 		)
 	}
 }

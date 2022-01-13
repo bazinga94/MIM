@@ -7,22 +7,22 @@
 
 import RIBs
 import RxSwift
+import RxCocoa
 import UIKit
 import SnapKit
 
 protocol ParentPresentableListener: AnyObject {
 	// TODO: Declare properties and methods that the view controller can invoke to perform
-	// business logic, such as signIn(). This protocol is implemented by the corresponding
-	// interactor class.
+	// business logic, such as signIn(). This protocol is implemented by the corresponding interactor class.
 }
 
 final class ParentViewController: UIViewController, ParentPresentable, ParentViewControllable {
 
-	// MARK: - ImagePresentable
+	// MARK: - ParentPresentable
 
 	weak var listener: ParentPresentableListener?
 
-//	lazy var childButtonClickObservable: Observable<Void> = detailButton.rx.tap.asObservable()
+	lazy var showChildButtonClickObservable: Observable<Void> = detailButton.rx.tap.asObservable()
 
 	// MARK: - Properties
 
@@ -63,7 +63,6 @@ final class ParentViewController: UIViewController, ParentPresentable, ParentVie
 		super.viewDidLoad()
 
 		setupUI()
-//		bind(to: listener)
 	}
 }
 
@@ -90,5 +89,18 @@ private extension ParentViewController {
 			$0.centerX.equalTo(textField.snp.centerX)
 			$0.top.equalTo(textField.snp.bottom).offset(8)
 		}
+	}
+}
+
+// MARK: - ParentViewControllable
+extension ParentViewController {
+	func present(_ viewController: ViewControllable, animated: Bool) {
+		present(viewController.uiviewController, animated: true)
+	}
+
+	func dismiss(_ viewController: ViewControllable, animated: Bool) {
+		guard !viewController.uiviewController.isBeingDismissed else { return }
+
+		viewController.uiviewController.dismiss(animated: animated)
 	}
 }

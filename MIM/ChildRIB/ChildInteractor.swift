@@ -7,6 +7,7 @@
 
 import RIBs
 import RxSwift
+import RxCocoa
 
 protocol ChildRouting: ViewableRouting {
 	// TODO: Declare methods the interactor can invoke to manage sub-tree via the router.
@@ -28,6 +29,13 @@ final class ChildInteractor: PresentableInteractor<ChildPresentable>, ChildInter
 	weak var router: ChildRouting?
 	weak var listener: ChildListener?
 
+	// MARK: - ChildPresentableListener
+	var viewModel: Observable<String> {
+		viewModelRelay.asObservable()
+	}
+
+	private let viewModelRelay: BehaviorRelay<String>	// 초기값을 제공하고 UI용 Observable + Observer
+
 	// TODO: Add additional dependencies to constructor. Do not perform any logic in constructor.
 
 	// MARK: - Con(De)structor
@@ -36,6 +44,7 @@ final class ChildInteractor: PresentableInteractor<ChildPresentable>, ChildInter
 		message: String,
 		presenter: ChildPresentable
 	) {
+		viewModelRelay = .init(value: message)
 		super.init(presenter: presenter)
 		presenter.listener = self
 	}

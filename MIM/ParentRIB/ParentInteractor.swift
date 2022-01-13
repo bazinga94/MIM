@@ -10,11 +10,14 @@ import RxSwift
 
 protocol ParentRouting: ViewableRouting {
 	// TODO: Declare methods the interactor can invoke to manage sub-tree via the router.
+	func attachChildRIB()
+	func detachChildRIB()
 }
 
 protocol ParentPresentable: Presentable {
-	var listener: ParentPresentableListener? { get set }
 	// TODO: Declare methods the interactor can invoke the presenter to present data.
+	var listener: ParentPresentableListener? { get set }
+	var showChildButtonClickObservable: Observable<Void> { get }
 }
 
 protocol ParentListener: AnyObject {
@@ -44,10 +47,23 @@ final class ParentInteractor: PresentableInteractor<ParentPresentable>, ParentIn
 	override func didBecomeActive() {
 		super.didBecomeActive()
 		// TODO: Implement business logic here.
+
+		bindPresenter()
 	}
 
 	override func willResignActive() {
 		super.willResignActive()
 		// TODO: Pause any business logic.
+	}
+}
+
+// MARK: - Binding
+private extension ParentInteractor {
+	private func bindPresenter() {
+		presenter.showChildButtonClickObservable
+			.bind { [weak self] in
+				self?.router?.attachChildRIB()
+			}
+			.disposeOnDeactivate(interactor: self)
 	}
 }
