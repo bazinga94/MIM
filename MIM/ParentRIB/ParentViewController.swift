@@ -32,6 +32,7 @@ final class ParentViewController: UIViewController, ParentPresentable, ParentVie
 
 	private let textField: UITextField = {
 		let textField = UITextField()
+		textField.borderStyle = .bezel
 		return textField
 	}()
 
@@ -70,6 +71,7 @@ final class ParentViewController: UIViewController, ParentPresentable, ParentVie
 private extension ParentViewController {
 	func setupUI() {
 		view.backgroundColor = .white
+		textField.text = listener.publisher
 
 		view.addSubview(textField)
 		view.addSubview(detailButton)
