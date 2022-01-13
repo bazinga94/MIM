@@ -15,7 +15,7 @@ protocol RootPresentableListener: AnyObject {
 	// interactor class.
 }
 
-final class RootViewController: UIViewController, RootPresentable {
+final class RootViewController: UIViewController, RootPresentable, RootViewControllable {
 
 	// MARK: - RootPresentable
 
@@ -23,7 +23,7 @@ final class RootViewController: UIViewController, RootPresentable {
 }
 
 // MARK: - RootViewControllable
-extension RootViewController: RootViewControllable {
+extension RootViewController {
 	func present(_ viewController: ViewControllable, animated: Bool) {
 		present(viewController.uiviewController, animated: animated)
 	}
