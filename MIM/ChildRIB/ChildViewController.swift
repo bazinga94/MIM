@@ -7,6 +7,7 @@
 
 import RIBs
 import RxSwift
+import RxCocoa
 import UIKit
 import SnapKit
 
@@ -22,7 +23,11 @@ final class ChildViewController: UIViewController, ChildPresentable, ChildViewCo
 
 	weak var listener: ChildPresentableListener?
 
+	lazy var detachObservable: Observable<Void> = detachRelay.asObservable()
+
 	// MARK: - Properties
+
+	private let detachRelay: PublishRelay<Void> = .init()
 
 	private let disposeBag: DisposeBag = .init()
 
@@ -31,6 +36,12 @@ final class ChildViewController: UIViewController, ChildPresentable, ChildViewCo
 	private let centerLabel: UILabel = {
 		let label = UILabel()
 		return label
+	}()
+
+	private let closeButton: UIButton = {
+		let button = UIButton(type: .system)
+		button.setTitle("Close Child", for: .normal)
+		return button
 	}()
 
 	// MARK: - Con(De)structor
@@ -55,15 +66,17 @@ final class ChildViewController: UIViewController, ChildPresentable, ChildViewCo
 
 		setupUI()
 		bind(to: listener)
+		bindView()
 	}
 }
 
 // MARK: - SetupUI
 private extension ChildViewController {
 	func setupUI() {
+		presentationController?.delegate = self
 		view.backgroundColor = .white
-
 		view.addSubview(centerLabel)
+		view.addSubview(closeButton)
 
 		layout()
 	}
@@ -72,8 +85,11 @@ private extension ChildViewController {
 		centerLabel.snp.makeConstraints {
 			$0.centerX.equalTo(view.snp.centerX)
 			$0.centerY.equalTo(view.snp.centerY)
-			$0.width.equalTo(300)
-			$0.height.equalTo(40)
+		}
+
+		closeButton.snp.makeConstraints {
+			$0.centerX.equalTo(view.snp.centerX)
+			$0.top.equalTo(centerLabel.snp.bottom).offset(20)
 		}
 	}
 }
@@ -87,5 +103,18 @@ private extension ChildViewController {
 				self?.centerLabel.text = text
 			})
 			.disposed(by: disposeBag)
+	}
+
+	func bindView() {
+		closeButton.rx.tap
+			.bind(to: detachRelay)
+			.disposed(by: disposeBag)
+	}
+}
+
+// MARK: - UIAdaptivePresentationControllerDelegate
+extension ChildViewController: UIAdaptivePresentationControllerDelegate {
+	func presentationControllerDidDismiss(_ presentationController: UIPresentationController) {
+		detachRelay.accept(())
 	}
 }

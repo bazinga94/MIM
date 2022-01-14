@@ -14,12 +14,14 @@ protocol ChildRouting: ViewableRouting {
 }
 
 protocol ChildPresentable: Presentable {
-	var listener: ChildPresentableListener? { get set }
 	// TODO: Declare methods the interactor can invoke the presenter to present data.
+	var listener: ChildPresentableListener? { get set }
+	var detachObservable: Observable<Void> { get }
 }
 
 protocol ChildListener: AnyObject {
 	// TODO: Declare methods the interactor can invoke to communicate with other RIBs.
+	func detachChildRIB()
 }
 
 final class ChildInteractor: PresentableInteractor<ChildPresentable>, ChildInteractable, ChildPresentableListener {
@@ -52,10 +54,21 @@ final class ChildInteractor: PresentableInteractor<ChildPresentable>, ChildInter
 	override func didBecomeActive() {
 		super.didBecomeActive()
 		// TODO: Implement business logic here.
+		bindPresenter()
 	}
 
 	override func willResignActive() {
 		super.willResignActive()
 		// TODO: Pause any business logic.
+	}
+}
+
+private extension ChildInteractor {
+	func bindPresenter() {
+		presenter.detachObservable
+			.bind { [weak self] _ in
+				self?.listener?.detachChildRIB()
+			}
+			.disposeOnDeactivate(interactor: self)
 	}
 }

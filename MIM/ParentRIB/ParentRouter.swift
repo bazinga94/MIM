@@ -47,6 +47,9 @@ extension ParentRouter {
 	}
 
 	func detachChildRIB() {
-
+		guard let router = childRouter else { return }
+		viewController.dismiss(router.viewControllable, animated: true)
+		detachChild(router)
+		childRouter = nil
 	}
 }

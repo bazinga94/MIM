@@ -67,3 +67,10 @@ private extension ParentInteractor {
 			.disposeOnDeactivate(interactor: self)
 	}
 }
+
+// MARK: - ParentInteractable
+extension ParentInteractor {
+	func detachChildRIB() {
+		router?.detachChildRIB()
+	}
+}
