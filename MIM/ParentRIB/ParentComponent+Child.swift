@@ -7,8 +7,4 @@
 
 import RIBs
 
-extension ParentComponent: ChildDependency {
-	var message: String {
-		"Hello RIBs~"
-	}
-}
+extension ParentComponent: ChildDependency { }
