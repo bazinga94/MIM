@@ -24,6 +24,8 @@ final class ParentViewController: UIViewController, ParentPresentable, ParentVie
 
 	lazy var showChildButtonClickObservable: Observable<Void> = detailButton.rx.tap.asObservable()
 
+	lazy var parentTextFieldTextObservable: Observable<String> = textField.rx.text.orEmpty.asObservable()
+
 	// MARK: - Properties
 
 	private let disposeBag: DisposeBag = .init()

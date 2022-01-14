@@ -24,7 +24,7 @@ final class ChildComponent: Component<ChildDependency> {
 // MARK: - Builder
 
 protocol ChildBuildable: Buildable {
-	func build(withListener listener: ChildListener) -> ChildRouting
+	func build(withListener listener: ChildListener, text: String) -> ChildRouting
 }
 
 final class ChildBuilder: Builder<ChildDependency>, ChildBuildable {
@@ -33,11 +33,12 @@ final class ChildBuilder: Builder<ChildDependency>, ChildBuildable {
 		super.init(dependency: dependency)
 	}
 
-	func build(withListener listener: ChildListener) -> ChildRouting {
-		let component = ChildComponent(dependency: dependency)
+	func build(withListener listener: ChildListener, text: String) -> ChildRouting {
+//		let component = ChildComponent(dependency: dependency)
 		let viewController = ChildViewController()
 		let interactor = ChildInteractor(
-			message: component.message,
+//			message: component.message,
+			message: text,	// TODO: 이게 올바른 데이터 전달 방법인지 모르겠음..
 			presenter: viewController
 		)
 		interactor.listener = listener

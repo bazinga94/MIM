@@ -10,7 +10,7 @@ import RxSwift
 
 protocol ParentRouting: ViewableRouting {
 	// TODO: Declare methods the interactor can invoke to manage sub-tree via the router.
-	func attachChildRIB()
+	func attachChildRIB(text: String)
 	func detachChildRIB()
 }
 
@@ -18,6 +18,7 @@ protocol ParentPresentable: Presentable {
 	// TODO: Declare methods the interactor can invoke the presenter to present data.
 	var listener: ParentPresentableListener? { get set }
 	var showChildButtonClickObservable: Observable<Void> { get }
+	var parentTextFieldTextObservable: Observable<String> { get }
 }
 
 protocol ParentListener: AnyObject {
@@ -60,11 +61,17 @@ final class ParentInteractor: PresentableInteractor<ParentPresentable>, ParentIn
 // MARK: - Binding
 private extension ParentInteractor {
 	private func bindPresenter() {
-		presenter.showChildButtonClickObservable
-			.bind { [weak self] in
-				self?.router?.attachChildRIB()
+		presenter.showChildButtonClickObservable.withLatestFrom(presenter.parentTextFieldTextObservable)
+			.bind { [weak self] text in
+				self?.router?.attachChildRIB(text: text)
 			}
 			.disposeOnDeactivate(interactor: self)
+
+//		presenter.showChildButtonClickObservable
+//			.bind { [weak self] in
+//				self?.router?.attachChildRIB()	// 여기서 인자로 message를 넘겨주자
+//			}
+//			.disposeOnDeactivate(interactor: self)	// 데이터 전달 없는 경우
 	}
 }
 
