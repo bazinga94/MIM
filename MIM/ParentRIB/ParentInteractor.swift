@@ -10,7 +10,7 @@ import RxSwift
 
 protocol ParentRouting: ViewableRouting {
 	// TODO: Declare methods the interactor can invoke to manage sub-tree via the router.
-	func attachChildRIB(text: String)
+	func attachChildRIB(message: String)
 	func detachChildRIB()
 }
 
@@ -63,7 +63,7 @@ private extension ParentInteractor {
 	private func bindPresenter() {
 		presenter.showChildButtonClickObservable.withLatestFrom(presenter.parentTextFieldTextObservable)
 			.bind { [weak self] text in
-				self?.router?.attachChildRIB(text: text)
+				self?.router?.attachChildRIB(message: text)
 			}
 			.disposeOnDeactivate(interactor: self)
 

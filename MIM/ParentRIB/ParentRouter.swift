@@ -39,8 +39,8 @@ final class ParentRouter: ViewableRouter<ParentInteractable, ParentViewControlla
 
 // MARK: - ParentRouting
 extension ParentRouter {
-	func attachChildRIB(text: String) {
-		let router = childBuilder.build(withListener: interactor, text: text)	// 넘겨받은 message를 build 할때 포함 할 수 있게 전달
+	func attachChildRIB(message: String) {
+		let router = childBuilder.build(withListener: interactor, message: message)	// 넘겨받은 message를 build 할때 포함 할 수 있게 전달
 		childRouter = router
 		attachChild(router)
 		viewController.present(router.viewControllable, animated: true)
