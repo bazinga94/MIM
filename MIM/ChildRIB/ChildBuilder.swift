@@ -16,7 +16,7 @@ protocol ChildDependency: Dependency {
 final class ChildComponent: Component<ChildDependency> {
 
 	// TODO: Declare 'fileprivate' dependencies that are only used by this RIB.
-	var message: String {
+	fileprivate var message: String {
 		dependency.message
 	}
 }
