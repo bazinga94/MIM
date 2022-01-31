@@ -17,9 +17,16 @@ protocol HomeViewControllable: ViewControllable {
 }
 
 final class HomeRouter: ViewableRouter<HomeInteractable, HomeViewControllable>, HomeRouting {
+
+	private let dashBoardBuilder: DashBoardBuildable
 	
 	// TODO: Constructor inject child builder protocols to allow building children.
-	override init(interactor: HomeInteractable, viewController: HomeViewControllable) {
+	init(
+		interactor: HomeInteractable,
+		viewController: HomeViewControllable,
+		dashBoardBuilder: DashBoardBuildable
+	) {
+		self.dashBoardBuilder = dashBoardBuilder
 		super.init(interactor: interactor, viewController: viewController)
 		interactor.router = self
 	}

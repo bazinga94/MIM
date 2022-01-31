@@ -28,15 +28,19 @@ final class HomeBuilder: Builder<HomeDependency>, HomeBuildable {
 	override init(dependency: HomeDependency) {
 		super.init(dependency: dependency)
 	}
-	
+
 	func build(withListener listener: HomeListener) -> HomeRouting {
 		let component = HomeComponent(dependency: dependency)
 		let viewController = HomeViewController()
 		let interactor = HomeInteractor(presenter: viewController)
 		interactor.listener = listener
 
-		let dashBoard = DashBoardBuilder(dependency: component)
+		let dashBoardBuilder = DashBoardBuilder(dependency: component)
 
-		return HomeRouter(interactor: interactor, viewController: viewController)
+		return HomeRouter(
+			interactor: interactor,
+			viewController: viewController,
+			dashBoardBuilder: dashBoardBuilder
+		)
 	}
 }

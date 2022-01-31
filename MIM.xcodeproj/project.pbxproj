@@ -198,9 +198,10 @@
 		438AE4B327A7B99A0029305D /* RIBs */ = {
 			isa = PBXGroup;
 			children = (
-				438AE4C227A7CFA10029305D /* DashBoard */,
 				43261E6F278FBC4E0038EF0E /* RootRIB */,
 				438AE4B227A7B9920029305D /* Home */,
+				438AE4CD27A7D5740029305D /* Finance */,
+				438AE4C227A7CFA10029305D /* DashBoard */,
 			);
 			path = RIBs;
 			sourceTree = "<group>";
@@ -214,6 +215,13 @@
 				438AE4C627A7CFCD0029305D /* DashBoardInteractor.swift */,
 			);
 			path = DashBoard;
+			sourceTree = "<group>";
+		};
+		438AE4CD27A7D5740029305D /* Finance */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Finance;
 			sourceTree = "<group>";
 		};
 		43A343672768D9CC000A8D82 = {
