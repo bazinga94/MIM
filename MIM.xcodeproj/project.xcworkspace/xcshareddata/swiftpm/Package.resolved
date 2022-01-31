@@ -2,6 +2,15 @@
   "object": {
     "pins": [
       {
+        "package": "PinLayout",
+        "repositoryURL": "https://github.com/layoutBox/PinLayout.git",
+        "state": {
+          "branch": null,
+          "revision": "93feb9f10c669033b52e6fd9589152036fcbd809",
+          "version": "1.10.0"
+        }
+      },
+      {
         "package": "ReactorKit",
         "repositoryURL": "https://github.com/ReactorKit/ReactorKit.git",
         "state": {
