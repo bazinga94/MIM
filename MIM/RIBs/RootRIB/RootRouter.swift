@@ -20,6 +20,7 @@ protocol RootInteractable: Interactable, ParentListener {
 }
 
 protocol RootViewControllable: ViewControllable {
+	// TODO: Declare methods the router invokes to manipulate the view hierarchy.
 }
 
 final class RootRouter: LaunchRouter<RootInteractable, RootViewControllable>, RootRouting {
@@ -29,7 +30,7 @@ final class RootRouter: LaunchRouter<RootInteractable, RootViewControllable>, Ro
 	private let parentBuilder: ParentBuildable
 
 	// MARK: - Con(De)structor
-
+	// TODO: Constructor inject child builder protocols to allow building children.
 	init(
 		parentBuilder: ParentBuildable,
 		interactor: RootInteractable,
@@ -39,12 +40,6 @@ final class RootRouter: LaunchRouter<RootInteractable, RootViewControllable>, Ro
 		super.init(interactor: interactor, viewController: viewController)
 		interactor.router = self
 	}
-
-//	// TODO: Constructor inject child builder protocols to allow building children.
-//	override init(interactor: RootInteractable, viewController: RootViewControllable) {
-//		super.init(interactor: interactor, viewController: viewController)
-//		interactor.router = self
-//	}
 
 	// MARK: - Overridden: LaunchRouter
 
