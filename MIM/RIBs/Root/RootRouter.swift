@@ -14,7 +14,9 @@
 
 import RIBs
 
-protocol RootInteractable: Interactable, ParentListener {
+protocol RootInteractable: Interactable,
+//							ParentListener,
+							HomeListener {
 	var router: RootRouting? { get set }
 	var listener: RootListener? { get set }
 }
@@ -27,16 +29,19 @@ final class RootRouter: LaunchRouter<RootInteractable, RootViewControllable>, Ro
 
 	// MARK: - Properties
 
-	private let parentBuilder: ParentBuildable
+//	private let parentBuilder: ParentBuildable
+	private let homeBuilder: HomeBuildable
 
 	// MARK: - Con(De)structor
 	// TODO: Constructor inject child builder protocols to allow building children.
 	init(
-		parentBuilder: ParentBuildable,
+//		parentBuilder: ParentBuildable,
+		homeBuilder: HomeBuildable,
 		interactor: RootInteractable,
 		viewController: RootViewControllable
 	) {
-		self.parentBuilder = parentBuilder
+//		self.parentBuilder = parentBuilder
+		self.homeBuilder = homeBuilder
 		super.init(interactor: interactor, viewController: viewController)
 		interactor.router = self
 	}
@@ -46,18 +51,25 @@ final class RootRouter: LaunchRouter<RootInteractable, RootViewControllable>, Ro
 	override func didLoad() {
 		super.didLoad()
 
-		attachParentRIB()
+//		attachParentRIB()
+		attachHome()
 	}
 
 	// MARK: - Private methods
 
 	private func attachParentRIB() {
-		let router = parentBuilder.build(withListener: interactor)
-		attachChild(router)
-		viewController.present(router.viewControllable, animated: true, completion: nil)
+//		let router = parentBuilder.build(withListener: interactor)
+//		attachChild(router)
+//		viewController.present(router.viewControllable, animated: true, completion: nil)
 		/*
 		 .viewControllable을 사용하는 이유 -> UIKit을 import 하지 않기 위해, UIViewController를 한번 감싼 Interface임.
 		 */
+	}
+
+	private func attachHome() {
+		let router = homeBuilder.build(withListener: interactor)
+		attachChild(router)
+		viewController.present(router.viewControllable, animated: false, completion: nil)
 	}
 }
 

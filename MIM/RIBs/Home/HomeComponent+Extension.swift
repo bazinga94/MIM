@@ -8,3 +8,5 @@
 import Foundation
 
 extension HomeComponent: DashBoardDependency { }
+
+extension HomeComponent: FinanceDependency { }

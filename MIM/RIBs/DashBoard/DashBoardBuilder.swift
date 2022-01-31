@@ -30,7 +30,7 @@ final class DashBoardBuilder: Builder<DashBoardDependency>, DashBoardBuildable {
 	}
 	
 	func build(withListener listener: DashBoardListener) -> DashBoardRouting {
-		let component = DashBoardComponent(dependency: dependency)
+		let _ = DashBoardComponent(dependency: dependency)
 		let viewController = DashBoardViewController()
 		let interactor = DashBoardInteractor(presenter: viewController)
 		interactor.listener = listener

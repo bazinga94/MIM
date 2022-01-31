@@ -30,7 +30,7 @@ final class FinanceBuilder: Builder<FinanceDependency>, FinanceBuildable {
 	}
 	
 	func build(withListener listener: FinanceListener) -> FinanceRouting {
-		let component = FinanceComponent(dependency: dependency)
+		let _ = FinanceComponent(dependency: dependency)
 		let viewController = FinanceViewController()
 		let interactor = FinanceInteractor(presenter: viewController)
 		interactor.listener = listener

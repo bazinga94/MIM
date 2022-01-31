@@ -36,10 +36,12 @@ final class HomeBuilder: Builder<HomeDependency>, HomeBuildable {
 		interactor.listener = listener
 
 		let dashBoardBuilder = DashBoardBuilder(dependency: component)
+		let financeBuilder = FinanceBuilder(dependency: component)
 
 		return HomeRouter(
 			interactor: interactor,
 			viewController: viewController,
+			financeBuilder: financeBuilder,
 			dashBoardBuilder: dashBoardBuilder
 		)
 	}

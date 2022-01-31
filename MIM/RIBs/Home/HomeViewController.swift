@@ -18,21 +18,30 @@ protocol HomePresentableListener: AnyObject {
 
 final class HomeViewController: UITabBarController, HomePresentable, HomeViewControllable {
 
-	// MARK: - ParentPresentable
+	// MARK: - HomePresentable
 
 	weak var listener: HomePresentableListener?
 
-	// MARK: - UIComponents
+	// MARK: - HomeViewControllable
 
-	private let stackView: UIStackView = {
-		let stackView = UIStackView()
-		stackView.translatesAutoresizingMaskIntoConstraints = false
-		stackView.axis = .vertical
-		stackView.alignment = .fill
-		stackView.distribution = .equalSpacing
-		stackView.spacing = 4
-		return stackView
-	}()
+	func setViewControllers(_ viewControllers: [ViewControllable]) {
+		super.setViewControllers(viewControllers.map(\.uiviewController), animated: false)
+	}
+
+	// MARK: - Con(De)structor
+
+	init() {
+		super.init(nibName: nil, bundle: nil)
+		modalPresentationStyle = .fullScreen
+	}
+
+	required init?(coder: NSCoder) {
+		fatalError("init(coder:) has not been implemented")
+	}
+
+	deinit {
+		print("deinit: \(type(of: self))")
+	}
 
 	// MARK: - Overridden: UIViewController
 
@@ -46,13 +55,11 @@ final class HomeViewController: UITabBarController, HomePresentable, HomeViewCon
 // MARK: - Set up UI
 private extension HomeViewController {
 	func setupUI() {
-		view.backgroundColor = .white
-
-		view.addSubview(stackView)
-		layout()
+		tabBar.isTranslucent = false
+		tabBar.tintColor = .black
+		tabBar.backgroundColor = .white
 	}
 
 	func layout() {
-		stackView.pin.top().left().right()
 	}
 }

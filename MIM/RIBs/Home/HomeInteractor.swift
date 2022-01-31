@@ -10,6 +10,7 @@ import RxSwift
 
 protocol HomeRouting: ViewableRouting {
 	// TODO: Declare methods the interactor can invoke to manage sub-tree via the router.
+	func attachTabs()
 }
 
 protocol HomePresentable: Presentable {
@@ -36,6 +37,7 @@ final class HomeInteractor: PresentableInteractor<HomePresentable>, HomeInteract
 	override func didBecomeActive() {
 		super.didBecomeActive()
 		// TODO: Implement business logic here.
+		router?.attachTabs()
 	}
 
 	override func willResignActive() {
