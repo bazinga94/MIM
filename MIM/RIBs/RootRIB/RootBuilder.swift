@@ -15,6 +15,9 @@ protocol RootDependency: Dependency {
 	// TODO: Declare the set of dependencies required by this RIB, but cannot be created by this RIB.
 }
 
+/*
+ Riblet에서 필요한 것들을 담는 바구니 + 자식 Riblet에서 필요한 것들도 담는다.
+ */
 final class RootComponent: Component<RootDependency> {
 	// TODO: Declare 'fileprivate' dependencies that are only used by this RIB.
 	let rootViewController: RootViewController

@@ -34,6 +34,9 @@ final class HomeBuilder: Builder<HomeDependency>, HomeBuildable {
 		let viewController = HomeViewController()
 		let interactor = HomeInteractor(presenter: viewController)
 		interactor.listener = listener
+
+		let dashBoard = DashBoardBuilder(dependency: component)
+
 		return HomeRouter(interactor: interactor, viewController: viewController)
 	}
 }

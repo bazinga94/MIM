@@ -36,6 +36,11 @@
 		438AE4BB27A7BA000029305D /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438AE4B727A7BA000029305D /* HomeInteractor.swift */; };
 		438AE4BE27A7BC970029305D /* ReactorKit in Frameworks */ = {isa = PBXBuildFile; productRef = 438AE4BD27A7BC970029305D /* ReactorKit */; };
 		438AE4C127A7C3FD0029305D /* PinLayout in Frameworks */ = {isa = PBXBuildFile; productRef = 438AE4C027A7C3FD0029305D /* PinLayout */; };
+		438AE4C727A7CFCD0029305D /* DashBoardRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438AE4C327A7CFCD0029305D /* DashBoardRouter.swift */; };
+		438AE4C827A7CFCE0029305D /* DashBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438AE4C427A7CFCD0029305D /* DashBoardViewController.swift */; };
+		438AE4C927A7CFCE0029305D /* DashBoardBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438AE4C527A7CFCD0029305D /* DashBoardBuilder.swift */; };
+		438AE4CA27A7CFCE0029305D /* DashBoardInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438AE4C627A7CFCD0029305D /* DashBoardInteractor.swift */; };
+		438AE4CC27A7D0600029305D /* HomeComponent+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438AE4CB27A7D0600029305D /* HomeComponent+Extension.swift */; };
 		43A343742768D9CC000A8D82 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A343732768D9CC000A8D82 /* AppDelegate.swift */; };
 		43A343762768D9CC000A8D82 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A343752768D9CC000A8D82 /* SceneDelegate.swift */; };
 		43A3437D2768D9D1000A8D82 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43A3437C2768D9D1000A8D82 /* Assets.xcassets */; };
@@ -83,6 +88,11 @@
 		438AE4B527A7BA000029305D /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		438AE4B627A7BA000029305D /* HomeBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBuilder.swift; sourceTree = "<group>"; };
 		438AE4B727A7BA000029305D /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
+		438AE4C327A7CFCD0029305D /* DashBoardRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashBoardRouter.swift; sourceTree = "<group>"; };
+		438AE4C427A7CFCD0029305D /* DashBoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashBoardViewController.swift; sourceTree = "<group>"; };
+		438AE4C527A7CFCD0029305D /* DashBoardBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashBoardBuilder.swift; sourceTree = "<group>"; };
+		438AE4C627A7CFCD0029305D /* DashBoardInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashBoardInteractor.swift; sourceTree = "<group>"; };
+		438AE4CB27A7D0600029305D /* HomeComponent+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeComponent+Extension.swift"; sourceTree = "<group>"; };
 		43A343702768D9CC000A8D82 /* MIM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MIM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		43A343732768D9CC000A8D82 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		43A343752768D9CC000A8D82 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -180,6 +190,7 @@
 				438AE4B527A7BA000029305D /* HomeViewController.swift */,
 				438AE4B627A7BA000029305D /* HomeBuilder.swift */,
 				438AE4B727A7BA000029305D /* HomeInteractor.swift */,
+				438AE4CB27A7D0600029305D /* HomeComponent+Extension.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -197,6 +208,10 @@
 		438AE4C227A7CFA10029305D /* DashBoard */ = {
 			isa = PBXGroup;
 			children = (
+				438AE4C327A7CFCD0029305D /* DashBoardRouter.swift */,
+				438AE4C427A7CFCD0029305D /* DashBoardViewController.swift */,
+				438AE4C527A7CFCD0029305D /* DashBoardBuilder.swift */,
+				438AE4C627A7CFCD0029305D /* DashBoardInteractor.swift */,
 			);
 			path = DashBoard;
 			sourceTree = "<group>";
@@ -434,22 +449,27 @@
 				43261E93278FC9D40038EF0E /* AppComponent.swift in Sources */,
 				43261E8E278FBEFA0038EF0E /* ParentBuilder.swift in Sources */,
 				438AE4BA27A7BA000029305D /* HomeBuilder.swift in Sources */,
+				438AE4C727A7CFCD0029305D /* DashBoardRouter.swift in Sources */,
 				43261E84278FBEE70038EF0E /* ChildRouter.swift in Sources */,
 				438AE4B827A7BA000029305D /* HomeRouter.swift in Sources */,
 				43261E98279014D20038EF0E /* ParentComponent+Child.swift in Sources */,
+				438AE4CA27A7CFCE0029305D /* DashBoardInteractor.swift in Sources */,
 				43261E87278FBEE70038EF0E /* ChildInteractor.swift in Sources */,
 				43261E8F278FBEFA0038EF0E /* ParentInteractor.swift in Sources */,
 				43261E9A2790189E0038EF0E /* RootComponent+Parent.swift in Sources */,
 				43261E86278FBEE70038EF0E /* ChildBuilder.swift in Sources */,
 				43261E8C278FBEFA0038EF0E /* ParentRouter.swift in Sources */,
 				43261E85278FBEE70038EF0E /* ChildViewController.swift in Sources */,
+				438AE4C827A7CFCE0029305D /* DashBoardViewController.swift in Sources */,
 				43261E7C278FBED70038EF0E /* RootRouter.swift in Sources */,
 				43261E7F278FBED70038EF0E /* RootInteractor.swift in Sources */,
 				438AE4B127A7B7650029305D /* RIBs+Navigation.swift in Sources */,
 				438AE4B927A7BA000029305D /* HomeViewController.swift in Sources */,
 				43261E8D278FBEFA0038EF0E /* ParentViewController.swift in Sources */,
+				438AE4CC27A7D0600029305D /* HomeComponent+Extension.swift in Sources */,
 				43A343742768D9CC000A8D82 /* AppDelegate.swift in Sources */,
 				43A343762768D9CC000A8D82 /* SceneDelegate.swift in Sources */,
+				438AE4C927A7CFCE0029305D /* DashBoardBuilder.swift in Sources */,
 				43261E7E278FBED70038EF0E /* RootBuilder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
