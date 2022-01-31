@@ -29,6 +29,7 @@
 		43261EA127901DEE0038EF0E /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 43261EA027901DEE0038EF0E /* RxRelay */; };
 		43261EA327901DEE0038EF0E /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 43261EA227901DEE0038EF0E /* RxSwift */; };
 		43261EA527901DEE0038EF0E /* RxTest in Frameworks */ = {isa = PBXBuildFile; productRef = 43261EA427901DEE0038EF0E /* RxTest */; };
+		438AE4B127A7B7650029305D /* RIBs+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438AE4B027A7B7650029305D /* RIBs+.swift */; };
 		43A343742768D9CC000A8D82 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A343732768D9CC000A8D82 /* AppDelegate.swift */; };
 		43A343762768D9CC000A8D82 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A343752768D9CC000A8D82 /* SceneDelegate.swift */; };
 		43A3437D2768D9D1000A8D82 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43A3437C2768D9D1000A8D82 /* Assets.xcassets */; };
@@ -71,6 +72,7 @@
 		43261E92278FC9D40038EF0E /* AppComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppComponent.swift; sourceTree = "<group>"; };
 		43261E97279014D20038EF0E /* ParentComponent+Child.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ParentComponent+Child.swift"; sourceTree = "<group>"; };
 		43261E992790189E0038EF0E /* RootComponent+Parent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RootComponent+Parent.swift"; sourceTree = "<group>"; };
+		438AE4B027A7B7650029305D /* RIBs+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RIBs+.swift"; sourceTree = "<group>"; };
 		43A343702768D9CC000A8D82 /* MIM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MIM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		43A343732768D9CC000A8D82 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		43A343752768D9CC000A8D82 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -151,6 +153,14 @@
 			path = RootRIB;
 			sourceTree = "<group>";
 		};
+		438AE4AF27A7B7480029305D /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				438AE4B027A7B7650029305D /* RIBs+.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		43A343672768D9CC000A8D82 = {
 			isa = PBXGroup;
 			children = (
@@ -174,6 +184,7 @@
 		43A343722768D9CC000A8D82 /* MIM */ = {
 			isa = PBXGroup;
 			children = (
+				438AE4AF27A7B7480029305D /* Utils */,
 				43261E6F278FBC4E0038EF0E /* RootRIB */,
 				43261E64278ECCAD0038EF0E /* ChildRIB */,
 				43261E63278EC8130038EF0E /* ParentRIB */,
@@ -387,6 +398,7 @@
 				43261E85278FBEE70038EF0E /* ChildViewController.swift in Sources */,
 				43261E7C278FBED70038EF0E /* RootRouter.swift in Sources */,
 				43261E7F278FBED70038EF0E /* RootInteractor.swift in Sources */,
+				438AE4B127A7B7650029305D /* RIBs+.swift in Sources */,
 				43261E8D278FBEFA0038EF0E /* ParentViewController.swift in Sources */,
 				43A343742768D9CC000A8D82 /* AppDelegate.swift in Sources */,
 				43A343762768D9CC000A8D82 /* SceneDelegate.swift in Sources */,
