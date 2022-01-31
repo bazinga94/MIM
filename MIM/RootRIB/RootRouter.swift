@@ -6,7 +6,6 @@
 //
 
 import RIBs
-import UIKit
 
 protocol RootInteractable: Interactable, ParentListener {
 	var router: RootRouting? { get set }
@@ -56,6 +55,9 @@ final class RootRouter: LaunchRouter<RootInteractable, RootViewControllable>, Ro
 		let router = parentBuilder.build(withListener: interactor)
 		attachChild(router)
 		viewController.present(router.viewControllable, animated: false)
+		/*
+		 .viewControllable을 사용하는 이유 -> UIKit을 import 하지 않기 위해, UIViewController를 한번 감싼 Interface임.
+		 */
 	}
 }
 
