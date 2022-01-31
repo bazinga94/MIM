@@ -5,6 +5,10 @@
 //  Created by Jongho Lee on 2022/01/13.
 //
 
+/*
+ 비즈니스 로직을 포함하는 객체, View와 ~PresentableListener, ~Presentable 을 통해 로직을 수행
+ */
+
 import RIBs
 import RxSwift
 

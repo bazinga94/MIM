@@ -5,6 +5,13 @@
 //  Created by Jongho Lee on 2022/01/13.
 //
 
+/*
+ Riblet 트리를 만들고 View, ViewController 간에 라우팅을 담당
+ 자식 Riblet을 만드는 경우, 자식 Builder에서 build 메소드를 통해 Router를 만들고
+ attachChild 메소드를 통해 instance를 참조시킴 + activate, load 메소드 실행
+ ViewController를 등장 시키는건 개발자의 몫이다.
+ */
+
 import RIBs
 
 protocol RootInteractable: Interactable, ParentListener {

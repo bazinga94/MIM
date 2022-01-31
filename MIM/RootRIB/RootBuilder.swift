@@ -5,6 +5,10 @@
 //  Created by Jongho Lee on 2022/01/13.
 //
 
+/*
+ Riblet의 객체들을 생성하고 Router를 반환
+ */
+
 import RIBs
 
 protocol RootDependency: Dependency {
