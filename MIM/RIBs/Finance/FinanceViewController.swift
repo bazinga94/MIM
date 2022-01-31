@@ -1,5 +1,5 @@
 //
-//  HomeViewController.swift
+//  FinanceViewController.swift
 //  MIM
 //
 //  Created by Jongho Lee on 2022/01/31.
@@ -7,20 +7,19 @@
 
 import RIBs
 import RxSwift
-import PinLayout
 import UIKit
 
-protocol HomePresentableListener: AnyObject {
+protocol FinancePresentableListener: AnyObject {
 	// TODO: Declare properties and methods that the view controller can invoke to perform
 	// business logic, such as signIn(). This protocol is implemented by the corresponding
 	// interactor class.
 }
 
-final class HomeViewController: UITabBarController, HomePresentable, HomeViewControllable {
+final class FinanceViewController: UIViewController, FinancePresentable, FinanceViewControllable {
 
-	// MARK: - ParentPresentable
+	// MARK: - FinancePresentable
 
-	weak var listener: HomePresentableListener?
+	weak var listener: FinancePresentableListener?
 
 	// MARK: - UIComponents
 
@@ -44,7 +43,7 @@ final class HomeViewController: UITabBarController, HomePresentable, HomeViewCon
 }
 
 // MARK: - Set up UI
-private extension HomeViewController {
+private extension FinanceViewController {
 	func setupUI() {
 		view.backgroundColor = .white
 
@@ -56,3 +55,4 @@ private extension HomeViewController {
 		stackView.pin.top().left().right()
 	}
 }
+

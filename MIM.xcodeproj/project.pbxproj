@@ -41,6 +41,10 @@
 		438AE4C927A7CFCE0029305D /* DashBoardBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438AE4C527A7CFCD0029305D /* DashBoardBuilder.swift */; };
 		438AE4CA27A7CFCE0029305D /* DashBoardInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438AE4C627A7CFCD0029305D /* DashBoardInteractor.swift */; };
 		438AE4CC27A7D0600029305D /* HomeComponent+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438AE4CB27A7D0600029305D /* HomeComponent+Extension.swift */; };
+		438AE4D227A7D80B0029305D /* FinanceRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438AE4CE27A7D80B0029305D /* FinanceRouter.swift */; };
+		438AE4D327A7D80B0029305D /* FinanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438AE4CF27A7D80B0029305D /* FinanceViewController.swift */; };
+		438AE4D427A7D80B0029305D /* FinanceBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438AE4D027A7D80B0029305D /* FinanceBuilder.swift */; };
+		438AE4D527A7D80B0029305D /* FinanceInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438AE4D127A7D80B0029305D /* FinanceInteractor.swift */; };
 		43A343742768D9CC000A8D82 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A343732768D9CC000A8D82 /* AppDelegate.swift */; };
 		43A343762768D9CC000A8D82 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A343752768D9CC000A8D82 /* SceneDelegate.swift */; };
 		43A3437D2768D9D1000A8D82 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43A3437C2768D9D1000A8D82 /* Assets.xcassets */; };
@@ -93,6 +97,10 @@
 		438AE4C527A7CFCD0029305D /* DashBoardBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashBoardBuilder.swift; sourceTree = "<group>"; };
 		438AE4C627A7CFCD0029305D /* DashBoardInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashBoardInteractor.swift; sourceTree = "<group>"; };
 		438AE4CB27A7D0600029305D /* HomeComponent+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeComponent+Extension.swift"; sourceTree = "<group>"; };
+		438AE4CE27A7D80B0029305D /* FinanceRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinanceRouter.swift; sourceTree = "<group>"; };
+		438AE4CF27A7D80B0029305D /* FinanceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinanceViewController.swift; sourceTree = "<group>"; };
+		438AE4D027A7D80B0029305D /* FinanceBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinanceBuilder.swift; sourceTree = "<group>"; };
+		438AE4D127A7D80B0029305D /* FinanceInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinanceInteractor.swift; sourceTree = "<group>"; };
 		43A343702768D9CC000A8D82 /* MIM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MIM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		43A343732768D9CC000A8D82 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		43A343752768D9CC000A8D82 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -163,7 +171,7 @@
 			path = ChildRIB;
 			sourceTree = "<group>";
 		};
-		43261E6F278FBC4E0038EF0E /* RootRIB */ = {
+		43261E6F278FBC4E0038EF0E /* Root */ = {
 			isa = PBXGroup;
 			children = (
 				43261E78278FBED70038EF0E /* RootRouter.swift */,
@@ -172,7 +180,7 @@
 				43261E7B278FBED70038EF0E /* RootInteractor.swift */,
 				43261E992790189E0038EF0E /* RootComponent+Parent.swift */,
 			);
-			path = RootRIB;
+			path = Root;
 			sourceTree = "<group>";
 		};
 		438AE4AF27A7B7480029305D /* Utils */ = {
@@ -198,7 +206,7 @@
 		438AE4B327A7B99A0029305D /* RIBs */ = {
 			isa = PBXGroup;
 			children = (
-				43261E6F278FBC4E0038EF0E /* RootRIB */,
+				43261E6F278FBC4E0038EF0E /* Root */,
 				438AE4B227A7B9920029305D /* Home */,
 				438AE4CD27A7D5740029305D /* Finance */,
 				438AE4C227A7CFA10029305D /* DashBoard */,
@@ -220,6 +228,10 @@
 		438AE4CD27A7D5740029305D /* Finance */ = {
 			isa = PBXGroup;
 			children = (
+				438AE4CE27A7D80B0029305D /* FinanceRouter.swift */,
+				438AE4CF27A7D80B0029305D /* FinanceViewController.swift */,
+				438AE4D027A7D80B0029305D /* FinanceBuilder.swift */,
+				438AE4D127A7D80B0029305D /* FinanceInteractor.swift */,
 			);
 			path = Finance;
 			sourceTree = "<group>";
@@ -459,8 +471,10 @@
 				438AE4BA27A7BA000029305D /* HomeBuilder.swift in Sources */,
 				438AE4C727A7CFCD0029305D /* DashBoardRouter.swift in Sources */,
 				43261E84278FBEE70038EF0E /* ChildRouter.swift in Sources */,
+				438AE4D527A7D80B0029305D /* FinanceInteractor.swift in Sources */,
 				438AE4B827A7BA000029305D /* HomeRouter.swift in Sources */,
 				43261E98279014D20038EF0E /* ParentComponent+Child.swift in Sources */,
+				438AE4D327A7D80B0029305D /* FinanceViewController.swift in Sources */,
 				438AE4CA27A7CFCE0029305D /* DashBoardInteractor.swift in Sources */,
 				43261E87278FBEE70038EF0E /* ChildInteractor.swift in Sources */,
 				43261E8F278FBEFA0038EF0E /* ParentInteractor.swift in Sources */,
@@ -471,10 +485,12 @@
 				438AE4C827A7CFCE0029305D /* DashBoardViewController.swift in Sources */,
 				43261E7C278FBED70038EF0E /* RootRouter.swift in Sources */,
 				43261E7F278FBED70038EF0E /* RootInteractor.swift in Sources */,
+				438AE4D427A7D80B0029305D /* FinanceBuilder.swift in Sources */,
 				438AE4B127A7B7650029305D /* RIBs+Navigation.swift in Sources */,
 				438AE4B927A7BA000029305D /* HomeViewController.swift in Sources */,
 				43261E8D278FBEFA0038EF0E /* ParentViewController.swift in Sources */,
 				438AE4CC27A7D0600029305D /* HomeComponent+Extension.swift in Sources */,
+				438AE4D227A7D80B0029305D /* FinanceRouter.swift in Sources */,
 				43A343742768D9CC000A8D82 /* AppDelegate.swift in Sources */,
 				43A343762768D9CC000A8D82 /* SceneDelegate.swift in Sources */,
 				438AE4C927A7CFCE0029305D /* DashBoardBuilder.swift in Sources */,
