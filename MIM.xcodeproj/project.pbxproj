@@ -187,10 +187,18 @@
 		438AE4B327A7B99A0029305D /* RIBs */ = {
 			isa = PBXGroup;
 			children = (
+				438AE4C227A7CFA10029305D /* DashBoard */,
 				43261E6F278FBC4E0038EF0E /* RootRIB */,
 				438AE4B227A7B9920029305D /* Home */,
 			);
 			path = RIBs;
+			sourceTree = "<group>";
+		};
+		438AE4C227A7CFA10029305D /* DashBoard */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DashBoard;
 			sourceTree = "<group>";
 		};
 		43A343672768D9CC000A8D82 = {
