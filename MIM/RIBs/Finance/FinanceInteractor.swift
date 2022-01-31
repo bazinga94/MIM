@@ -10,6 +10,7 @@ import RxSwift
 
 protocol FinanceRouting: ViewableRouting {
 	// TODO: Declare methods the interactor can invoke to manage sub-tree via the router.
+	func attachDashBoard()
 }
 
 protocol FinancePresentable: Presentable {
@@ -26,8 +27,7 @@ final class FinanceInteractor: PresentableInteractor<FinancePresentable>, Financ
 	weak var router: FinanceRouting?
 	weak var listener: FinanceListener?
 
-	// TODO: Add additional dependencies to constructor. Do not perform any logic
-	// in constructor.
+	// TODO: Add additional dependencies to constructor. Do not perform any logic in constructor.
 	override init(presenter: FinancePresentable) {
 		super.init(presenter: presenter)
 		presenter.listener = self
@@ -36,6 +36,7 @@ final class FinanceInteractor: PresentableInteractor<FinancePresentable>, Financ
 	override func didBecomeActive() {
 		super.didBecomeActive()
 		// TODO: Implement business logic here.
+		router?.attachDashBoard()
 	}
 
 	override func willResignActive() {

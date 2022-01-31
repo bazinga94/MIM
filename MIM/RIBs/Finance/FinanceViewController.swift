@@ -22,15 +22,27 @@ final class FinanceViewController: UIViewController, FinancePresentable, Finance
 
 	weak var listener: FinancePresentableListener?
 
+	// MARK: - FinanceViewControllable
+
+	func addDashBoard(_ viewControllable: ViewControllable) {
+		let viewController = viewControllable.uiviewController
+
+		addChild(viewController)
+		stackView.addArrangedSubview(viewController.view)
+		viewController.didMove(toParent: self)
+	}
+
 	// MARK: - UIComponents
 
 	private let stackView: UIStackView = {
 		let stackView = UIStackView()
-		stackView.translatesAutoresizingMaskIntoConstraints = false
+//		stackView.translatesAutoresizingMaskIntoConstraints = false
+		// PinLayout을 사용 하는 경우 필요 없다. AutoLayout을 통해 layout을 결정하지 않아서 그런것 같다.
 		stackView.axis = .vertical
 		stackView.alignment = .fill
 		stackView.distribution = .equalSpacing
 		stackView.spacing = 4
+		stackView.backgroundColor = .blue
 		return stackView
 	}()
 
