@@ -45,6 +45,7 @@
 		438AE4D327A7D80B0029305D /* FinanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438AE4CF27A7D80B0029305D /* FinanceViewController.swift */; };
 		438AE4D427A7D80B0029305D /* FinanceBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438AE4D027A7D80B0029305D /* FinanceBuilder.swift */; };
 		438AE4D527A7D80B0029305D /* FinanceInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438AE4D127A7D80B0029305D /* FinanceInteractor.swift */; };
+		438AE4D727A7E0770029305D /* FinanceComponent+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438AE4D627A7E0770029305D /* FinanceComponent+Extension.swift */; };
 		43A343742768D9CC000A8D82 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A343732768D9CC000A8D82 /* AppDelegate.swift */; };
 		43A343762768D9CC000A8D82 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A343752768D9CC000A8D82 /* SceneDelegate.swift */; };
 		43A3437D2768D9D1000A8D82 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43A3437C2768D9D1000A8D82 /* Assets.xcassets */; };
@@ -101,6 +102,7 @@
 		438AE4CF27A7D80B0029305D /* FinanceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinanceViewController.swift; sourceTree = "<group>"; };
 		438AE4D027A7D80B0029305D /* FinanceBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinanceBuilder.swift; sourceTree = "<group>"; };
 		438AE4D127A7D80B0029305D /* FinanceInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinanceInteractor.swift; sourceTree = "<group>"; };
+		438AE4D627A7E0770029305D /* FinanceComponent+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FinanceComponent+Extension.swift"; sourceTree = "<group>"; };
 		43A343702768D9CC000A8D82 /* MIM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MIM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		43A343732768D9CC000A8D82 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		43A343752768D9CC000A8D82 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -232,6 +234,7 @@
 				438AE4CF27A7D80B0029305D /* FinanceViewController.swift */,
 				438AE4D027A7D80B0029305D /* FinanceBuilder.swift */,
 				438AE4D127A7D80B0029305D /* FinanceInteractor.swift */,
+				438AE4D627A7E0770029305D /* FinanceComponent+Extension.swift */,
 			);
 			path = Finance;
 			sourceTree = "<group>";
@@ -488,6 +491,7 @@
 				438AE4D427A7D80B0029305D /* FinanceBuilder.swift in Sources */,
 				438AE4B127A7B7650029305D /* RIBs+Navigation.swift in Sources */,
 				438AE4B927A7BA000029305D /* HomeViewController.swift in Sources */,
+				438AE4D727A7E0770029305D /* FinanceComponent+Extension.swift in Sources */,
 				43261E8D278FBEFA0038EF0E /* ParentViewController.swift in Sources */,
 				438AE4CC27A7D0600029305D /* HomeComponent+Extension.swift in Sources */,
 				438AE4D227A7D80B0029305D /* FinanceRouter.swift in Sources */,

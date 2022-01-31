@@ -18,8 +18,16 @@ protocol FinanceViewControllable: ViewControllable {
 
 final class FinanceRouter: ViewableRouter<FinanceInteractable, FinanceViewControllable>, FinanceRouting {
 
+	// MARK: - Builder
+	private let dashBoardBuilder: DashBoardBuildable
+
 	// TODO: Constructor inject child builder protocols to allow building children.
-	override init(interactor: FinanceInteractable, viewController: FinanceViewControllable) {
+	init(
+		interactor: FinanceInteractable,
+		viewController: FinanceViewControllable,
+		dashBoardBuilder: DashBoardBuildable
+	) {
+		self.dashBoardBuilder = dashBoardBuilder
 		super.init(interactor: interactor, viewController: viewController)
 		interactor.router = self
 	}

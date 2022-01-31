@@ -19,18 +19,16 @@ protocol HomeViewControllable: ViewControllable {
 
 final class HomeRouter: ViewableRouter<HomeInteractable, HomeViewControllable>, HomeRouting {
 
+	// MARK: - Builder
 	private let financeBuilder: FinanceBuildable
-	private let dashBoardBuilder: DashBoardBuildable
 	
 	// TODO: Constructor inject child builder protocols to allow building children.
 	init(
 		interactor: HomeInteractable,
 		viewController: HomeViewControllable,
-		financeBuilder: FinanceBuildable,
-		dashBoardBuilder: DashBoardBuildable
+		financeBuilder: FinanceBuildable
 	) {
 		self.financeBuilder = financeBuilder
-		self.dashBoardBuilder = dashBoardBuilder
 		super.init(interactor: interactor, viewController: viewController)
 		interactor.router = self
 	}
