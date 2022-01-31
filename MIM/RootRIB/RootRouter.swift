@@ -20,8 +20,6 @@ protocol RootInteractable: Interactable, ParentListener {
 }
 
 protocol RootViewControllable: ViewControllable {
-	// TODO: Declare methods the router invokes to manipulate the view hierarchy.
-	func present(_ viewController: ViewControllable, animated: Bool)
 }
 
 final class RootRouter: LaunchRouter<RootInteractable, RootViewControllable>, RootRouting {
@@ -53,15 +51,15 @@ final class RootRouter: LaunchRouter<RootInteractable, RootViewControllable>, Ro
 	override func didLoad() {
 		super.didLoad()
 
-		attachImageRIB()
+		attachParentRIB()
 	}
 
 	// MARK: - Private methods
 
-	private func attachImageRIB() {
+	private func attachParentRIB() {
 		let router = parentBuilder.build(withListener: interactor)
 		attachChild(router)
-		viewController.present(router.viewControllable, animated: false)
+		viewController.present(router.viewControllable, animated: true, completion: nil)
 		/*
 		 .viewControllable을 사용하는 이유 -> UIKit을 import 하지 않기 위해, UIViewController를 한번 감싼 Interface임.
 		 */
