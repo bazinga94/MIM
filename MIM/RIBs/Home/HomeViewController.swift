@@ -31,7 +31,7 @@ final class HomeViewController: UITabBarController, HomePresentable, HomeViewCon
 
 	init() {
 		super.init(nibName: nil, bundle: nil)
-		modalPresentationStyle = .overFullScreen	// 등장 이상하게함...
+		modalPresentationStyle = .fullScreen	// RootViewController 대신 새로운 View를 보여주기 위해
 	}
 
 	required init?(coder: NSCoder) {

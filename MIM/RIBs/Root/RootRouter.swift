@@ -13,6 +13,7 @@
  */
 
 import RIBs
+import Foundation
 
 protocol RootInteractable: Interactable,
 //							ParentListener,
@@ -69,7 +70,11 @@ final class RootRouter: LaunchRouter<RootInteractable, RootViewControllable>, Ro
 	private func attachHome() {
 		let router = homeBuilder.build(withListener: interactor)
 		attachChild(router)
-		viewController.present(router.viewControllable, animated: false, completion: nil)
+
+		DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {		// Splash 효과
+			self.viewController.present(router.viewControllable, animated: false, completion: nil)
+		}
+//		viewController.present(router.viewControllable, animated: false, completion: nil)
 	}
 }
 

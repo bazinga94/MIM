@@ -20,11 +20,12 @@ final class RootViewController: UIViewController, RootPresentable, RootViewContr
 	// MARK: - RootPresentable
 
 	weak var listener: RootPresentableListener?
-}
 
-// MARK: - RootViewControllable
-extension RootViewController {
-	func present(_ viewController: ViewControllable, animated: Bool) {
-		present(viewController.uiviewController, animated: animated)
+	// MARK: - Overridden: UIViewController
+
+	override func viewDidLoad() {
+		super.viewDidLoad()
+
+		view.backgroundColor = .white
 	}
 }

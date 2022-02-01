@@ -62,7 +62,7 @@ final class DashBoardViewController: UIViewController, DashBoardPresentable, Das
 // MARK: - Set up UI
 private extension DashBoardViewController {
 	func setupUI() {
-		view.backgroundColor = .white
+		view.backgroundColor = .orange
 		view.addSubview(stackView)
 		stackView.addArrangedSubview(titleLabel)
 		stackView.addArrangedSubview(chargeButton)
@@ -71,7 +71,7 @@ private extension DashBoardViewController {
 	}
 
 	func layout() {
-		stackView.pin.top().left().right()
+		stackView.pin.top().left().right().height(100)
 	}
 
 	@objc
