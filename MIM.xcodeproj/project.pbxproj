@@ -31,7 +31,7 @@
 		43261EA527901DEE0038EF0E /* RxTest in Frameworks */ = {isa = PBXBuildFile; productRef = 43261EA427901DEE0038EF0E /* RxTest */; };
 		438AE4B127A7B7650029305D /* RIBs+Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438AE4B027A7B7650029305D /* RIBs+Navigation.swift */; };
 		438AE4B827A7BA000029305D /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438AE4B427A7BA000029305D /* HomeRouter.swift */; };
-		438AE4B927A7BA000029305D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438AE4B527A7BA000029305D /* HomeViewController.swift */; };
+		438AE4B927A7BA000029305D /* HomeTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438AE4B527A7BA000029305D /* HomeTabBarController.swift */; };
 		438AE4BA27A7BA000029305D /* HomeBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438AE4B627A7BA000029305D /* HomeBuilder.swift */; };
 		438AE4BB27A7BA000029305D /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438AE4B727A7BA000029305D /* HomeInteractor.swift */; };
 		438AE4BE27A7BC970029305D /* ReactorKit in Frameworks */ = {isa = PBXBuildFile; productRef = 438AE4BD27A7BC970029305D /* ReactorKit */; };
@@ -90,7 +90,7 @@
 		43261E992790189E0038EF0E /* RootComponent+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RootComponent+Extension.swift"; sourceTree = "<group>"; };
 		438AE4B027A7B7650029305D /* RIBs+Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RIBs+Navigation.swift"; sourceTree = "<group>"; };
 		438AE4B427A7BA000029305D /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
-		438AE4B527A7BA000029305D /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		438AE4B527A7BA000029305D /* HomeTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabBarController.swift; sourceTree = "<group>"; };
 		438AE4B627A7BA000029305D /* HomeBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBuilder.swift; sourceTree = "<group>"; };
 		438AE4B727A7BA000029305D /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
 		438AE4C327A7CFCD0029305D /* DashBoardRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashBoardRouter.swift; sourceTree = "<group>"; };
@@ -197,7 +197,7 @@
 			isa = PBXGroup;
 			children = (
 				438AE4B427A7BA000029305D /* HomeRouter.swift */,
-				438AE4B527A7BA000029305D /* HomeViewController.swift */,
+				438AE4B527A7BA000029305D /* HomeTabBarController.swift */,
 				438AE4B627A7BA000029305D /* HomeBuilder.swift */,
 				438AE4B727A7BA000029305D /* HomeInteractor.swift */,
 				438AE4CB27A7D0600029305D /* HomeComponent+Extension.swift */,
@@ -490,7 +490,7 @@
 				43261E7F278FBED70038EF0E /* RootInteractor.swift in Sources */,
 				438AE4D427A7D80B0029305D /* FinanceBuilder.swift in Sources */,
 				438AE4B127A7B7650029305D /* RIBs+Navigation.swift in Sources */,
-				438AE4B927A7BA000029305D /* HomeViewController.swift in Sources */,
+				438AE4B927A7BA000029305D /* HomeTabBarController.swift in Sources */,
 				438AE4D727A7E0770029305D /* FinanceComponent+Extension.swift in Sources */,
 				43261E8D278FBEFA0038EF0E /* ParentViewController.swift in Sources */,
 				438AE4CC27A7D0600029305D /* HomeComponent+Extension.swift in Sources */,

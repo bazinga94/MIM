@@ -15,7 +15,7 @@ protocol HomePresentableListener: AnyObject {
 	// interactor class.
 }
 
-final class HomeViewController: UITabBarController, HomePresentable, HomeViewControllable {
+final class HomeTabBarController: UITabBarController, HomePresentable, HomeViewControllable {
 
 	// MARK: - HomePresentable
 
@@ -52,7 +52,7 @@ final class HomeViewController: UITabBarController, HomePresentable, HomeViewCon
 }
 
 // MARK: - Set up UI
-private extension HomeViewController {
+private extension HomeTabBarController {
 	func setupUI() {
 		tabBar.isTranslucent = false
 		tabBar.tintColor = .black

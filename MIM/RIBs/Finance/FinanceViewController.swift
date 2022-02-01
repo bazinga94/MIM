@@ -59,6 +59,8 @@ final class FinanceViewController: UIViewController, FinancePresentable, Finance
 private extension FinanceViewController {
 	func setupUI() {
 		view.backgroundColor = .white
+		title = "홈"		// 무슨 용도?
+		tabBarItem = UITabBarItem(title: "홈", image: UIImage(systemName: "house"), selectedImage: UIImage(systemName: "house.fill"))
 		view.addSubview(stackView)
 		layout()
 	}
