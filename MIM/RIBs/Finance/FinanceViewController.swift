@@ -59,13 +59,12 @@ final class FinanceViewController: UIViewController, FinancePresentable, Finance
 private extension FinanceViewController {
 	func setupUI() {
 		view.backgroundColor = .white
-
 		view.addSubview(stackView)
 		layout()
 	}
 
 	func layout() {
-		stackView.pin.top().left().right()
+		stackView.pin.top(100).left().right()
 	}
 }
 
