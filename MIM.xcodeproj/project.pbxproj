@@ -29,6 +29,7 @@
 		43261EA127901DEE0038EF0E /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 43261EA027901DEE0038EF0E /* RxRelay */; };
 		43261EA327901DEE0038EF0E /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 43261EA227901DEE0038EF0E /* RxSwift */; };
 		43261EA527901DEE0038EF0E /* RxTest in Frameworks */ = {isa = PBXBuildFile; productRef = 43261EA427901DEE0038EF0E /* RxTest */; };
+		4383015927AC1A4C00BCACAC /* AddPaymentMethodButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4383015827AC1A4C00BCACAC /* AddPaymentMethodButton.swift */; };
 		438AE4B127A7B7650029305D /* RIBs+Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438AE4B027A7B7650029305D /* RIBs+Navigation.swift */; };
 		438AE4B827A7BA000029305D /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438AE4B427A7BA000029305D /* HomeRouter.swift */; };
 		438AE4B927A7BA000029305D /* HomeTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438AE4B527A7BA000029305D /* HomeTabBarController.swift */; };
@@ -88,6 +89,7 @@
 		43261E92278FC9D40038EF0E /* AppComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppComponent.swift; sourceTree = "<group>"; };
 		43261E97279014D20038EF0E /* ParentComponent+Child.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ParentComponent+Child.swift"; sourceTree = "<group>"; };
 		43261E992790189E0038EF0E /* RootComponent+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RootComponent+Extension.swift"; sourceTree = "<group>"; };
+		4383015827AC1A4C00BCACAC /* AddPaymentMethodButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPaymentMethodButton.swift; sourceTree = "<group>"; };
 		438AE4B027A7B7650029305D /* RIBs+Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RIBs+Navigation.swift"; sourceTree = "<group>"; };
 		438AE4B427A7BA000029305D /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
 		438AE4B527A7BA000029305D /* HomeTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabBarController.swift; sourceTree = "<group>"; };
@@ -185,6 +187,14 @@
 			path = Root;
 			sourceTree = "<group>";
 		};
+		4383015727AC1A3300BCACAC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4383015827AC1A4C00BCACAC /* AddPaymentMethodButton.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		438AE4AF27A7B7480029305D /* Utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -219,6 +229,7 @@
 		438AE4C227A7CFA10029305D /* DashBoard */ = {
 			isa = PBXGroup;
 			children = (
+				4383015727AC1A3300BCACAC /* Views */,
 				438AE4C327A7CFCD0029305D /* DashBoardRouter.swift */,
 				438AE4C427A7CFCD0029305D /* DashBoardViewController.swift */,
 				438AE4C527A7CFCD0029305D /* DashBoardBuilder.swift */,
@@ -474,6 +485,7 @@
 				438AE4BA27A7BA000029305D /* HomeBuilder.swift in Sources */,
 				438AE4C727A7CFCD0029305D /* DashBoardRouter.swift in Sources */,
 				43261E84278FBEE70038EF0E /* ChildRouter.swift in Sources */,
+				4383015927AC1A4C00BCACAC /* AddPaymentMethodButton.swift in Sources */,
 				438AE4D527A7D80B0029305D /* FinanceInteractor.swift in Sources */,
 				438AE4B827A7BA000029305D /* HomeRouter.swift in Sources */,
 				43261E98279014D20038EF0E /* ParentComponent+Child.swift in Sources */,
