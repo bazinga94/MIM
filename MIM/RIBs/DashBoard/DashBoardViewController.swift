@@ -65,7 +65,7 @@ final class DashBoardViewController: UIViewController, DashBoardPresentable, Das
 	init() {
 		super.init(nibName: nil, bundle: nil)
 
-		setupUI()
+		setupUI()	// 특이하게 viewDidLoad가 아닌 init 타이밍에 처리를 해준다.
 	}
 
 	required init?(coder: NSCoder) {
