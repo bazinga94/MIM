@@ -40,7 +40,7 @@ final class HomeRouter: ViewableRouter<HomeInteractable, HomeViewControllable>, 
 		attachChild(financeRouter)
 
 		let viewControllers = [
-			financeRouter.viewControllable
+			NavigationControllerable(root: financeRouter.viewControllable)
 		]
 
 		viewController.setViewControllers(viewControllers)
