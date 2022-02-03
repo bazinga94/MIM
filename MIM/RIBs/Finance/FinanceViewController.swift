@@ -66,7 +66,7 @@ private extension FinanceViewController {
 	}
 
 	func layout() {
-		stackView.pin.top(100).left().right()
+		stackView.pin.top(10).left().right()
 	}
 }
 
